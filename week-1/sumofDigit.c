@@ -1,0 +1,25 @@
+//calculate sum of digits in a string containing any character
+
+#include<stdio.h>
+#include<string.h>
+
+int sum(char *str){
+	int res=0;
+	int n=strlen(str);
+	for(int i=0;i<n;i++){
+		char ch=str[i];
+		if(ch>='0' && ch<='9'){
+			int newch=(int)ch-'0';
+			res+=newch;
+		}
+		else continue;
+	}
+	return res;
+}
+
+int main(){
+	char str[100];
+	fgets(str,sizeof(str),stdin);
+	printf("the sum of digits is %d\n",sum(str));
+	return 0;
+}

@@ -1,0 +1,19 @@
+//Read a number from STDIN, then display the sequence given below:
+//Input: 52934
+//Output: A5, B2, C9, D3, E4
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+int main(int argc,char* argv[]){
+	if (argc==1){
+		printf("No input\n");exit(1);
+	}
+	int len=strlen(argv[1]);
+	for(int i=0;i<len;i++){	
+		printf("%c%c, ",'A'+i,argv[1][i]);
+	}
+	return 0;
+}
